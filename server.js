@@ -33,10 +33,6 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-
-//my App goes here...
-//var myApp = require('./myApp')
-
 //listen
 app.listen(port, function () {
   console.log('Node.js listening ...');
