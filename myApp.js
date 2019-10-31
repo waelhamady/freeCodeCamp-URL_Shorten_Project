@@ -45,7 +45,7 @@ db.once("open", function() {
       var w3 = dns.lookup(reqUrl, function(err, addresses, family) {
         if (addresses !== undefined) {
           
-          // Start the db work
+          // Start the db work --- we can use urlModel.exists as well
           urlModel.findOne({ original_url: req.body.url }, function(err, data) {
             if (err) return console.error(err);
             if (!data) {
